@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+{% block body_block%}
+<h1 align="center"> Update Employee Informations Form</h1> <a class="nav-link btn btn-info mr-sm-2 btn-sm" href="/">BACK<span class="sr-only">(current)</span></a>
+<hr>
+<form method="post" enctype = "multipart/form-data">
+  <table  class="table table-striped table-info table-bordered" align="center">
+
+    <div class="form-group row">
+      <label for="colFormLabel" class="col-sm-2 col-form-label">Employee Num.</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="colFormLabel" name="id" value="{{employee.id}}">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="colFormLabel" class="col-sm-2 col-form-label"> Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="colFormLabel" name="sname" value="{{employee.sname}}">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="colFormLabel" class="col-sm-2 col-form-label">Sallary </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="colFormLabel" name="ssal" value="{{employee.ssal}}">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="colFormLabel" class="col-sm-2 col-form-label">Mobile </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="colFormLabel" name="smobile" value="{{employee.smobile}}">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="colFormLabel" class="col-sm-2 col-form-label">Email </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="colFormLabel" name="semail" value="{{employee.semail}}">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="colFormLabel" class="col-sm-2 col-form-label">Upload Image </label>
+      <div class="col-sm-10">
+        <input type="file" class="form-control" id="colFormLabel" name="simage" value="{{employee.simage}}">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="colFormLabel" class="col-sm-2 col-form-label">Address </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="colFormLabel" name="saddress" value="{{employee.saddress}}">
+      </div>
+    </div>
+
+
+</table>
+{% csrf_token%}
+<input type="submit" class="btn btn-info" value="Update Employee">
+</form>
+  {% endblock %}

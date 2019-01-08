@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+{% block body_block%}
+<h1 align="center"> View Employee Informations</h1><hr>
+<div class="container-fluid">
+
+  <div class="row" >
+    <div class="col-sm-6 alert alert-warning"  >
+      <p>Profile Image</p>
+        <p><img src="{{employee.simage.url}}" class="img-thumbnail " alt=""></p>
+
+    </div>
+
+    <div class="col-sm-3 alert alert-white ">
+    </div>
+
+    <div class="col-sm-3 alert alert-white ">
+      <a class="nav-link btn btn-info mr-sm-2 btn-sm" href="/">BACK<span class="sr-only">(current)</span></a>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4 alert alert-dark " >
+      <p>Employee ID</p>
+    </div>
+    <div class="col-sm-8 alert alert-dark" >
+      <p>{{employee.id}}</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4 alert alert-danger" >
+      <p> Name</p>
+    </div>
+    <div class="col-sm-8 alert alert-danger" >
+      <p>{{employee.sname}}</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4 alert alert-primary" >
+      <p> Sallary</p>
+    </div>
+    <div class="col-sm-8 alert alert-primary">
+      <p>{{employee.ssal}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4 alert alert-warning" >
+      <p> Mobile</p>
+    </div>
+    <div class="col-sm-8 alert alert-warning" >
+      <p>{{employee.smobile}}</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4 alert alert-info" >
+      <p> Email</p>
+    </div>
+    <div class="col-sm-8 alert alert-info">
+      <p>{{employee.semail}}</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4 alert alert-success"  >
+      <p>Address</p>
+    </div>
+    <div class="col-sm-8 alert alert-success">
+      <p>{{employee.saddress}}</p>
+    </div>
+  </div>
+
+
+</div>
+
+  {% endblock %}
